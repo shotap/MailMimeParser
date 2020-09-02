@@ -319,6 +319,7 @@ class MimePart
         if ($type === 'text/html' || $type === 'text/plain') {
             return true;
         }
+        return false;
     }
 
     /**
