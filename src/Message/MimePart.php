@@ -319,11 +319,6 @@ class MimePart
         if ($type === 'text/html' || $type === 'text/plain') {
             return true;
         }
-        $charset = $this->getHeaderParameter('Content-Type', 'charset');
-        return ($charset !== null && preg_match(
-            '~text/\w+~i',
-            $this->getHeaderValue('Content-Type', 'text/plain')
-        ));
     }
 
     /**
